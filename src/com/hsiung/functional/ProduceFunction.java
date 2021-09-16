@@ -1,0 +1,25 @@
+package com.hsiung.functional;// functional/ProduceFunction.java
+// (c)2021 MindView LLC: see Copyright.txt
+// We make no guarantees that this code is fit for any purpose.
+// Visit http://OnJava8.com for more book information.
+
+import java.util.function.*;
+
+interface
+FuncSS extends Function<String, String> {
+}   // [1]
+
+public class ProduceFunction {
+    static FuncSS produce() {
+//        return s -> s.toLowerCase();             // [2]
+      return  String::toLowerCase;
+    }
+
+    public static void main(String[] args) {
+        FuncSS f = produce();
+        System.out.println(f.apply("YELLING"));
+    }
+}
+/* Output:
+yelling
+*/

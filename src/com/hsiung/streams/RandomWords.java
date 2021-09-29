@@ -37,8 +37,9 @@ public class RandomWords implements Supplier<String> {
     }
 
     public static void main(String[] args) throws Exception {
+        String fname = "E:\\Workspace\\JavaProjects\\IdeaProjects\\StudyProjects\\OnJava8\\src\\com\\hsiung\\streams\\Cheese.dat";
         System.out.println(
-                Stream.generate(new RandomWords("E:\\Workspace\\JavaProjects\\IdeaProjects\\StudyProjects\\OnJava8\\src\\com\\hsiung\\streams\\Cheese.dat"))
+                Stream.generate(new RandomWords(fname))
                         .limit(10)
                         .collect(Collectors.joining(" ")));
     }

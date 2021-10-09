@@ -8,7 +8,7 @@ import java.util.*;
 public class SortedComparator {
     public static void
     main(String[] args) throws Exception {
-        FileToWords.stream(util.PATH)
+        FileToWords.stream(util.CHEESE_PATH)
                 .skip(10)
                 .limit(10)
                 .sorted(Comparator.reverseOrder())

@@ -44,8 +44,7 @@ interface Storm {
     void rainHard() throws RainedOut;
 }
 
-public
-class StormyInning extends Inning implements Storm {
+public class StormyInning extends Inning implements Storm {
     // OK to add new exceptions for constructors, but you
     // must deal with the base constructor exceptions:
     public StormyInning()
